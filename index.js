@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-body {
-    margin: 0;
-    padding:0;
-    font-family: "Open Sans", sans-serif;
-}
+import './index.css';
+import App from './App';
+import { ContextProvider } from './contexts/ContextProvider';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+ReactDOM.render(
+  <React.StrictMode>
+    <ContextProvider>
+      <App />
+    </ContextProvider>
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
